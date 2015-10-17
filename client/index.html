@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Chat Example</title>
+    <script type="text/javascript" src="../bower_components/knockout/dist/knockout.js"></script>
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"></link>
+
+    
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body>
+    <div id="calculator">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Javascript Calculator</h2>
+          <span data-bind="text: input"></span>
+          <h3>Answer</h3>
+          <span data-bind="text: answer"></span>
+        </div>
+      </div>
+      <div class="row">
+        <!-- ko foreach: numbers -->
+        <div class="col-xs-4">
+          <button type="button" 
+                  class="btn" 
+                  data-bind="text: $data, click: function(){addToInput($data)}">
+          </button>
+        </div>
+        <!--/ko-->
+      </div>
+      <div class="row">
+        <!-- ko foreach: operators -->
+        <div class="col-xs-4">
+          <button type="button" 
+                  class="btn btn-primary"
+                  data-bind="text:$data,
+                             click: function(){addToInput($data)}"></button>
+        </div>
+        <!--/ko-->
+      </div>
+    </div>
+  </body>
+</html>

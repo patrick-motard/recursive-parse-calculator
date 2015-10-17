@@ -1,0 +1,21 @@
+body {
+  background-color: lightgrey;
+}
+
+h1 {
+  font-family: Ubuntu, sans-serif;
+  font-weight: bold;
+}
+
+.well {
+  box-shadow: 10px 10px 5px #888888;
+}
+div {
+  width: 350px;
+  margin: 0 auto;
+}
+
+button {
+  width: 85px;
+  margin: 5px;
+}
